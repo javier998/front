@@ -1,0 +1,47 @@
+ <!--Comienza el contenedor-->
+ <div class="container-fluid">
+    <!--Comienza el contenedor para las columnas-->
+    <div class="container align-middle " style="height: 80vh;">
+        <!--Comienza el div con la fila para las 3 columnas-->
+        <div class="row largo align-middle align-items-center ">
+
+            <!--Columna posicion derecha-->
+            <!--Esta columna solo se utilizara para dar espacios-->
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+
+            <!--Columna posicion central, esta columna se utilzara para el formulario-->
+            <div class="rounded border-primary bg-light col-10 col-sm-8 col-md-6 col-lg-4">
+                <h1 class="title text-primary text-center p-3">Iniciar Sesión</h1>
+                <form (ngSubmit)="enviar()" action="get">
+                    <!--Input nombre de usuario-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                           <!-- <ion-icon name="person-circle-outline"></ion-icon>-->
+                        </span>
+                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Nombre de Usuario" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <!--Input contraseña-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                           <!--  <ion-icon name="key-outline"></ion-icon>-->
+                        </span>
+                        <input [(ngModel)]="usuario.password" name="password" type="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>  
+                    <!--Boton de ingresar-->                
+                    <div class="input-group mb-3">
+                        <input type="submit" class="form-control" value="Ingresar">
+                    </div>
+                    
+                    <div class="text-center input-group mb-3">
+                        <a routerLink="registrar" routerLinkActive="active" class="" href="registrar">¿Aun no estas registrado?</a>
+                    </div>
+                </form>
+                
+            </div>
+
+            <!--Columna posicion izquierda-->
+            <!--Esta columna se utilzara para espacio-->
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+        </div>
+    </div>
+</div>

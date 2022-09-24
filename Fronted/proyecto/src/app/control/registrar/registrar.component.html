@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <!--Comienza el contenedor para las columnas-->
+    <div class="container align-middle " style="height: 80vh;">
+        <!--Comienza el div con la fila para las 3 columnas-->
+        <div class="row largo align-middle align-items-center ">
+
+            <!--Columna posicion derecha-->
+            <!--Esta columna solo se utilizara para dar espacios-->
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+
+            <!--Columna posicion central, esta columna se utilzara para el formulario-->
+            <div class="rounded border-primary bg-light col-10 col-sm-8 col-md-6 col-lg-4">
+                <h1 class="title text-primary text-center p-3">Registrar Usuario</h1>
+                <form (ngSubmit)="enviar()" action="POST">
+                    <!--Input ingreso de cedula-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                            
+                        </span>
+                        <input [(ngModel)]="usuario.persona.cedula" name="cedula" type="text" class="form-control" placeholder="Ingrese su cedula" aria-label="DNI" aria-describedby="basic-addon1">
+                    </div>
+
+                    <!--Input ingreso de nombres-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                            
+                        </span>
+                        <input [(ngModel)]="usuario.persona.nombre" name="nombre" type="text" class="form-control" placeholder="Ingrese sus nombres" aria-label="Names" aria-describedby="basic-addon1">
+                    </div>
+
+                    <!--Input ingreso de apellidos-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                           
+                        </span>
+                        <input [(ngModel)]="usuario.persona.apellido" type="text" class="form-control" placeholder="Ingrese sus apellidos" aria-label="LastName" aria-describedby="basic-addon1">
+                    </div>
+                    <!--Input ingreso su fecha de Nacimiento-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                            
+                        </span>
+                        <input [(ngModel)]="usuario.persona.fechaNacimiento" name ="fechaNac" type="date" class="form-control" aria-label="Date" aria-describedby="basic-addon1">
+                    </div>
+                    <!--Input ingreso de correo-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                            
+                        </span>
+                        <input type="email" class="form-control" placeholder="Ingrese el correo electronico" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+                    <!--Input ingreso de username-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                           
+                        </span>
+                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario" aria-label="LastName" aria-describedby="basic-addon1">
+                    </div>
+                    <!--Input ingreso de password-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            
+                        </span>
+                        <input [(ngModel)]="usuario.password" type="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>                  
+                    <div class="input-group mb-3">
+                        <input type="submit" class="form-control" value="Guardar">
+                    </div>
+                </form>
+                
+            </div>
+
+            <!--Columna posicion izquierda-->
+            <!--Esta columna se utilzara para espacio-->
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+        </div>
+    </div>
+</div>
