@@ -6,11 +6,13 @@ import com.jchimbo.proyecto.repository.UsuarioRepository;
 import com.jchimbo.proyecto.service.UsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Javier Chimbo
  */
+@Service
 public class UsuarioServiceImp implements UsuarioService{
 
     @Autowired

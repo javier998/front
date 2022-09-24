@@ -3,11 +3,13 @@ package com.jchimbo.proyecto.service;
 
 import com.jchimbo.proyecto.entity.Usuario;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Javier Chimbo
  */
+@Service
 public interface UsuarioService {
     public List<Usuario> GetAll();
     public Usuario GetById(String usuario_id);
