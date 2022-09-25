@@ -2,10 +2,10 @@ version: '2'
 
 services:
   app:
-    image: 'rol:latest'
+    image: 'backend-proyecto:latest'
     build:
       context: .
-    container_name: app
+    container_name: spring-boot
     depends_on:
       - db
     environment:
