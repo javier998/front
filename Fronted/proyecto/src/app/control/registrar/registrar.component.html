@@ -7,18 +7,29 @@
             <!--Columna posicion derecha-->
             <!--Esta columna solo se utilizara para dar espacios-->
             <div class="col-1 col-sm-2 col-md-3 col-lg-4">
-                <div class="text-center input-group mb-3">
-                    <a routerLink="registrar" routerLinkActive="active" class="" href="login">¿Deseas Iniciar Sesion?</a>
-                </div>
-               <!-- <div class="d-flex">
+               <div class="d-flex">
                     <button (click)="cambiar()" class="btn btn-outline-success">Ir a Login</button>
-                  </div>-->
+                  </div>
             </div>
 
             <!--Columna posicion central, esta columna se utilzara para el formulario-->
             <div class="rounded border-primary bg-light col-10 col-sm-8 col-md-6 col-lg-4">
                 <h1 class="title text-primary text-center p-3">Registrar Usuario</h1>
                 <form (ngSubmit)="enviar()" action="POST">
+                    <!--Input ingreso de username-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text " id="basic-addon1">
+                           
+                        </span>
+                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario">
+                    </div>
+                    <!--Input ingreso de password-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">
+                            
+                        </span>
+                        <input [(ngModel)]="usuario.password" name="password" type="password" class="form-control" placeholder="Contraseña">
+                    </div> 
                     <!--Input ingreso de cedula-->
                     <div class="input-group mb-3">
                         <span class="input-group-text " id="basic-addon1">
@@ -65,20 +76,7 @@
                         </span>
                         <input [(ngModel)]="usuario.persona.correo" name="email" type="email" class="form-control"  placeholder="Ingrese el correo electronico">
                     </div>
-                    <!--Input ingreso de username-->
-                    <div class="input-group mb-3">
-                        <span class="input-group-text " id="basic-addon1">
-                           
-                        </span>
-                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario">
-                    </div>
-                    <!--Input ingreso de password-->
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">
-                            
-                        </span>
-                        <input [(ngModel)]="usuario.password" name="password" type="password" class="form-control" placeholder="Contraseña">
-                    </div>                  
+                 
                     <div class="input-group mb-3">
                         <input type="submit" class="form-control" value="Guardar">
                     </div>

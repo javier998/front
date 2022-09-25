@@ -32,4 +32,8 @@ export class LoginComponent implements OnInit {
 
   }
 
+  cambiar(){
+    this.router.navigate(['registrar']);
+  }
+
 }
