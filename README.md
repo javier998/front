@@ -1,7 +1,7 @@
 # RESUMEN DEL PROYECTO
-Para el desarrollo del Backend se realizó con el Framwork de Spring Boot
-Para el desarrolo de la Base de Datos se utilizó Postgres
-Para el desarrollo del Fronted se realizó con el Framework de Angular
+- Para el desarrollo del Backend se realizó con el Framwork de Spring Boot
+- Para el desarrolo de la Base de Datos se utilizó Postgres
+- Para el desarrollo del Fronted se realizó con el Framework de Angular
 
 # DOCKERIZACION DEL BACKEND Y FRONTEND
 ## DOCKERIZACION DEL BACKEND REALIZADO EN SPRING BOOT + POSTGRES
