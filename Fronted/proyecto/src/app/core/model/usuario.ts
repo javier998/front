@@ -1,7 +1,7 @@
 import { Persona } from "./persona"
 
 export class Usuario {
-    usuario_id: Text| undefined
-    password: Text|undefined
+    usuario_id = ""
+    password = ""
     persona : Persona = new Persona()
 }

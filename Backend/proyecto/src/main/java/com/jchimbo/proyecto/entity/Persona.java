@@ -37,5 +37,8 @@ public class Persona implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date fechaNacimiento;
+    
+    @Column(name="correo")
+    private String correo;
 
 }

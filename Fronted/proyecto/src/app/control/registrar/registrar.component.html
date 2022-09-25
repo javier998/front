@@ -6,7 +6,14 @@
 
             <!--Columna posicion derecha-->
             <!--Esta columna solo se utilizara para dar espacios-->
-            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4">
+                <div class="text-center input-group mb-3">
+                    <a routerLink="registrar" routerLinkActive="active" class="" href="login">¿Deseas Iniciar Sesion?</a>
+                </div>
+               <!-- <div class="d-flex">
+                    <button (click)="cambiar()" class="btn btn-outline-success">Ir a Login</button>
+                  </div>-->
+            </div>
 
             <!--Columna posicion central, esta columna se utilzara para el formulario-->
             <div class="rounded border-primary bg-light col-10 col-sm-8 col-md-6 col-lg-4">
@@ -17,7 +24,7 @@
                         <span class="input-group-text " id="basic-addon1">
                             
                         </span>
-                        <input [(ngModel)]="usuario.persona.cedula" name="cedula" type="text" class="form-control" placeholder="Ingrese su cedula" aria-label="DNI" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.cedula" name="cedula" type="text" class="form-control" placeholder="Ingrese su cedula">
                     </div>
 
                     <!--Input ingreso de nombres-->
@@ -25,7 +32,7 @@
                         <span class="input-group-text " id="basic-addon1">
                             
                         </span>
-                        <input [(ngModel)]="usuario.persona.nombre" name="nombre" type="text" class="form-control" placeholder="Ingrese sus nombres" aria-label="Names" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.nombre" name="nombre" type="text" class="form-control" placeholder="Ingrese sus nombres">
                     </div>
 
                     <!--Input ingreso de apellidos-->
@@ -33,7 +40,7 @@
                         <span class="input-group-text " id="basic-addon1">
                            
                         </span>
-                        <input [(ngModel)]="usuario.persona.apellido" type="text" class="form-control" placeholder="Ingrese sus apellidos" aria-label="LastName" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.apellido" name="apellido" type="text" class="form-control" placeholder="Ingrese sus apellidos">
                     </div>
                     <!--Input ingreso de telefono-->
                     <div class="input-group mb-3">
@@ -41,7 +48,7 @@
                         <span class="input-group-text " id="basic-addon1">
                             
                         </span>
-                        <input [(ngModel)]="usuario.persona.telefono" name ="telefono" type="text" class="form-control" placeholder="Ingrese su # de telefono" aria-label="Telefono" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.telefono" name ="telefono" type="text" class="form-control" placeholder="Ingrese su # de telefono">
                     </div>
                     <!--Input ingreso su fecha de Nacimiento-->
                     Ingrese su fecha de nacimiento:
@@ -49,28 +56,28 @@
                         <span class="input-group-text " id="basic-addon1">
                             
                         </span>
-                        <input [(ngModel)]="usuario.persona.fechaNacimiento" name ="fechaNac" type="date" class="form-control" aria-label="Date" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.fechaNacimiento" name ="fechaNac" type="date" class="form-control" aria-label="Date">
                     </div>
                     <!--Input ingreso de correo-->
                     <div class="input-group mb-3">
                         <span class="input-group-text " id="basic-addon1">
                             
                         </span>
-                        <input type="email" class="form-control" placeholder="Ingrese el correo electronico" aria-label="Email" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.persona.correo" name="email" type="email" class="form-control"  placeholder="Ingrese el correo electronico">
                     </div>
                     <!--Input ingreso de username-->
                     <div class="input-group mb-3">
                         <span class="input-group-text " id="basic-addon1">
                            
                         </span>
-                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario" aria-label="LastName" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.usuario_id" name="username" type="text" class="form-control" placeholder="Ingrese su nombre de usuario">
                     </div>
                     <!--Input ingreso de password-->
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">
                             
                         </span>
-                        <input [(ngModel)]="usuario.password" type="password" class="form-control" placeholder="Contraseña" aria-label="Password" aria-describedby="basic-addon1">
+                        <input [(ngModel)]="usuario.password" name="password" type="password" class="form-control" placeholder="Contraseña">
                     </div>                  
                     <div class="input-group mb-3">
                         <input type="submit" class="form-control" value="Guardar">
@@ -81,7 +88,9 @@
 
             <!--Columna posicion izquierda-->
             <!--Esta columna se utilzara para espacio-->
-            <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
+            <div class="col-1 col-sm-2 col-md-3 col-lg-4">
+                {{mensaje}}
+            </div>
         </div>
     </div>
 </div>

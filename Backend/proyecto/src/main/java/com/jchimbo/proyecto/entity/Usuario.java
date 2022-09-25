@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 /**
  *
@@ -29,5 +31,6 @@ public class Usuario implements Serializable {
     
     @OneToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name="cedula")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Persona persona;
 }

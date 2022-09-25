@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/core/model/usuario';
+import { UsuarioService } from 'src/app/core/service/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -10,19 +11,25 @@ import { Usuario } from 'src/app/core/model/usuario';
 export class LoginComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
-
-  constructor(private router:Router) { }
+  mensaje= "";
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
 
-  enviar(){
-    this.router.navigate(['listar-tarea']);
-    sessionStorage.setItem('id',"Javier");
-    }
+  enviar() {
+    this.usuarioService.getToken(this.usuario).subscribe(data=>{
+      this.usuario = data
+      sessionStorage.setItem('username',""+this.usuario.usuario_id)
+      sessionStorage.setItem('nombre',""+this.usuario.persona.nombre)
+    },err=>{
+      this.mensaje=err.error.mensaje
+    });
 
-    registrar(){
+  }
 
-    }
+  registrar() {
+
+  }
 
 }
