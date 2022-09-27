@@ -64,10 +64,8 @@ spring.mvc.pathmatch.matching-strategy=ant-path-matcher
 #### 2. Ingresar a la  terminal con la ubicacion del proyecto y ejecutar
 ```
 npm install
-
 ```
 #### 3. Ejecutar el proyecto
 ```
 ng server
-
 ```
