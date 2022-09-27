@@ -34,7 +34,7 @@ public class Persona implements Serializable {
     private String telefono;
 
     @Column(name = "fechaNacimiento")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date fechaNacimiento;
     

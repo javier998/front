@@ -1,1 +1,38 @@
-<p>menu works!</p>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Tarea
+            </a>
+            
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a [routerLink]="['/listar-tarea']" routerLinkActive="active" class="dropdown-item">Listar</a></li>
+              <li><a [routerLink]="['/crear-tarea']" routerLinkActive="active" class="dropdown-item">Crear</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Historial
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a [routerLink]="['/historial']" routerLinkActive="active" class="dropdown-item">Listar</a></li>
+            </ul>
+          </li>
+  
+  
+        </ul>
+        <div class="d-flex">
+          <div class="p-2">Bienvenido {{nombre}}</div>
+        </div>
+        
+        <div class="d-flex">
+          <button (click)="cerrarSesion()" class="btn btn-outline-success">Cerrar session</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+ 
