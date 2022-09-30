@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Body 1
+            </a>
+            
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a [routerLink]="['/listar-tarea']" routerLinkActive="active" class="dropdown-item">Listar</a></li>
+              <li><a [routerLink]="['/crear-tarea']" routerLinkActive="active" class="dropdown-item">Crear</a></li>
+            </ul>
+          </li>
+
+
+  
+  
+        </ul>
+
+        
+        <div class="d-flex">
+          <button (click)="login()" class="btn btn-outline-success">LOGIN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+ 

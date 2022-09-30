@@ -31,4 +31,7 @@ export class RegistrarComponent implements OnInit {
   cambiar(){
     this.router.navigate(['login']);
   }
+  cambiarVista(){
+    this.router.navigate(['vista']);
+  }
 }

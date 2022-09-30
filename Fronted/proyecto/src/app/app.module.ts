@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import { ControlModule } from './control/control.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PublicModule } from './public/public.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ControlModule,
     DashboardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PublicModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]

@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
       this.usuario = data
       sessionStorage.setItem('username',""+this.usuario.usuario_id)
       sessionStorage.setItem('nombre',""+this.usuario.persona.nombre)
+      this.router.navigate(['listar-b1']);
     },err=>{
       this.mensaje=err.error.mensaje
     });
@@ -29,11 +30,14 @@ export class LoginComponent implements OnInit {
   }
 
   registrar() {
-
+    
   }
 
   cambiar(){
     this.router.navigate(['registrar']);
   }
 
+  cambiarVista(){
+    this.router.navigate(['vista']);
+  }
 }
